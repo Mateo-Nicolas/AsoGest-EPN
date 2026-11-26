@@ -26,7 +26,7 @@ En la Escuela Politécnica Nacional (EPN), las asociaciones estudiantiles gestio
 
 De acuerdo con la priorización MoSCoW realizada anteriormente y los acuerdos de negociación establecidos con los interesados para la primera versión operativa del sistema, la solución comprenderá los siguientes módulos y capacidades:
 
-- \- Gestión de Usuarios y Control de Acceso (RBAC): Creación, modificación y suspensión de cuentas de usuario con asignación de roles diferenciados [1], de los cuales tenemos: administrador principal/presidente, tesorero/administrador externo y operador estudiantil, incluyendo registro de inicios y cierres de sesión y almacenamiento de contraseñas cifradas mediante hashing SHA-256 [3]. [URL 🔗](#page-0)
+- \- Gestión de Usuarios y Control de Acceso (RBAC): Creación, modificación y suspensión de cuentas de usuario con asignación de roles diferenciados [1], de los cuales tenemos: administrador principal/presidente, tesorero/administrador externo y operador estudiantil, incluyendo registro de inicios y cierres de sesión y almacenamiento de almacenamiento de contraseñas mediante valores hash (SHA-256 como mecanismo propuesto, sujeto a validación técnica), sin texto plano [3]. [URL 🔗](#page-0)
 
 - \- Administración del Catálogo e Inventario: Gestión centralizada de productos y tarifas restringida exclusivamente al Administrador Principal y/o Tesorero/Administrador externo, acompañada del descuento automático de stock en tiempo real al confirmar cada venta. Cabe recalcar el uso de valores negativos en los registros para evitar desfases de productos, con su debido registro de incidencia.
 
@@ -64,7 +64,7 @@ El diseño e implementación de AsoGest EPN se sujetan a las siguientes limitaci
 - \- Restricción de Rendimiento en Mostrador: Para evitar filas durante los recesos universitarios, el flujo de registro de una venta se debe completarse en un tiempo igual o inferior a 10 segundos.
 
 
-- \- Restricción Normativa y de Seguridad: El sistema no puede autorizar ningún alquiler si no se confirma la recepción de la garantía física institucional (carné EPN o cédula), y todas las credenciales deben almacenarse encriptadas mediante SHA-256 sin texto plano [3]. [URL 🔗](#page-0)
+- \- Restricción Normativa y de Seguridad: El sistema no puede autorizar ningún alquiler si no se confirma la recepción de la garantía física institucional (carné EPN o cédula), y todas las credenciales deben almacenarse mediante valores hash (SHA-256 como mecanismo propuesto), sin texto plano [3]. [URL 🔗](#page-0)
 
 - \- Restricción Presupuestaria y de Tiempo: El desarrollo debe completarse dentro del cronograma del periodo académico 2026B–2027A por los tres integrantes del Grupo C, sin incurrir en costos de licenciamiento de software propietario o hardware adicional.
 
